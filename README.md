@@ -1,113 +1,105 @@
-🔐 Custom Password Generator with Strength Evaluation
 
-An interactive Python tool to generate strong, customized passwords based on user input, with automatic strength evaluation and password saving.
+🔐 PassForge - Custom Password Generator Tool
 
-
----
-
-✅ Features
-
-Generates strong, random passwords with custom length and format.
-
-Interactive prompts for user details (name, hobby, birth year, etc.).
-
-Automatic strength evaluation for each password.
-
-Saves generated passwords to passwords.txt.
-
-CLI support using argparse.
-
+PassForge is a Python-based interactive tool that generates strong, personalized passwords based on optional user input. It also evaluates and saves the generated passwords with strength levels.
 
 
 ---
 
-🧰 Requirements
+📦 Requirements
 
-Python 3.6 or higher
+Make sure you have Python 3 installed. No external packages are required — only built-in Python libraries are used.
+
+
+---
+
+⚙️ Installation
+
+1. Clone or download the tool:
+
+
+
+git clone https://github.com/your-username/passforge.git
+cd passforge
+
+2. (Optional) Create a virtual environment:
+
+
+
+python3 -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+3. Run the tool directly:
+
+
+
+python3 passforge.py --interactive
+
+
+---
+
+🚀 Usage Instructions
+
+To launch PassForge in interactive mode:
+
+python3 passforge.py --interactive
+
+You’ll be prompted to enter:
+
+First name (optional)
+
+Last name (optional)
+
+Hobby (optional)
+
+Year of birth (optional)
+
+Country (optional)
+
+Password length (default: 12)
+
+Number of password attempts to generate (default: 1)
+
+
+The generated passwords will be printed and saved in a file called passwords.txt.
+
+
+---
+
+📊 Example Output
+
+========================================
+
+Password 1: John@492913
+Strength: Very Strong
+
+
+---
+
+💡 Features
+
+Personalized password patterns
+
+Automatic strength scoring (Weak → Excellent)
+
+Password length customization
+
+Multiple output formats
+
+Saves passwords to passwords.txt
 
 
 
 ---
 
-📦 Installation
+📁 File Structure
 
-1. Make sure Python is installed
-Check Python version:
-
-python --version
-
-or:
-
-python3 --version
-
-
-2. Download the script
-
-Either copy password_generator.py manually
-
-Or clone the repository:
-
-git clone https://github.com/username/password-generator.git
-cd password-generator
-
-
-
+passforge.py          # Main tool script
+passwords.txt         # Output file (auto-created)
 
 
 ---
 
-⚙️ How to Run
+✅ License
 
-Run the tool in interactive mode:
-
-python password_generator.py --interactive
-
-Or, depending on your system:
-
-python3 password_generator.py --interactive
-
-You’ll be prompted for optional inputs like name, hobby, birth year, password length, and number of attempts.
-
-
----
-
-📝 Example Output
-
-python3 password_generator.py --interactive
-
-Expected Output:
-
-First name (Press Enter to skip): Peter
-
-Last name (Press Enter to skip): Smith
-
-What is your hobby? (Press Enter to skip): gaming
-
-What is your birth year? (Press Enter to skip): 2000
-
-What is your country? (Press Enter to skip): Jordan
-
-Password length? (Press Enter to skip, default is 12): 16
-
-Number of attempts? (Press Enter to skip, default is 1): 3
-
-==================================
-
-Password 1: Peter@493922
-Strength: Strong
-Password saved to file.
-...
-
-
----
-
-📁 Output File
-
-All generated passwords are saved to a file named passwords.txt in the same directory as the script.
-
-
----
-
-⚠️ Security Notice
-
-> This tool is intended for educational use. Do not use generated passwords for sensitive or critical accounts without additional review or secure generation methods.
+Open-source. You can modify and use PassForge freely under the MIT license (or your choice).
