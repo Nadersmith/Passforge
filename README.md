@@ -91,7 +91,8 @@ Password length? (Press Enter to skip, default is 12): 16
 
 Number of attempts? (Press Enter to skip, default is 1): 3
 
-========================================
+==================================
+
 Password 1: Peter@493922
 Strength: Strong
 Password saved to file.
