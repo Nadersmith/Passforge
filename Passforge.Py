@@ -2,7 +2,8 @@ import string
 import random
 import argparse
 
-# Enhanced password strength evaluation function
+# Tool: PassForge - Custom Password Generator with Strength Evaluation
+
 def password_strength(password):
     score = 0
     if len(password) >= 16:
@@ -27,7 +28,7 @@ def password_strength(password):
     else:
         return "Weak"
 
-# Function to generate custom passwords with various formats
+# Generate custom passwords using different formats
 def generate_custom_password():
     firstname = input("First name (Press Enter to skip): ") or ""
     lastname = input("Last name (Press Enter to skip): ") or ""
@@ -60,7 +61,6 @@ def generate_custom_password():
         fmt = random.choice(formats)
         password = fmt.format(name=name, name_lower=name_lower, number=number, reversed_number=reversed_number)
 
-        # Adjust password length
         if len(password) > length:
             password = password[:length]
         elif len(password) < length:
@@ -71,18 +71,19 @@ def generate_custom_password():
 
     return passwords
 
-# Save password to a file
+# Save password to file
 def save_password_to_file(password):
     with open('passwords.txt', 'a') as file:
         file.write(password + '\n')
 
-# Main function
+# Main execution point
 def main():
-    parser = argparse.ArgumentParser(description="Password Generator Tool with Strength Evaluation")
-    parser.add_argument("--interactive", action="store_true", help="Interact with the user to generate passwords based on inputs")
+    parser = argparse.ArgumentParser(description="PassForge - Generate custom passwords with strength evaluation")
+    parser.add_argument("--interactive", action="store_true", help="Launch PassForge in interactive mode to generate passwords")
     args = parser.parse_args()
 
     if args.interactive:
+        print("\n🔐 Welcome to PassForge - Custom Password Generator 🔐\n")
         passwords = generate_custom_password()
 
         for i, password in enumerate(passwords):
@@ -90,8 +91,9 @@ def main():
             print(f"Password {i + 1}: {password}")
             print(f"Strength: {password_strength(password)}")
             save_password_to_file(password)
+        print("\n✅ Password(s) saved to passwords.txt")
     else:
-        print("Please use the --interactive option to generate passwords.")
+        print("⚠️ Please use the --interactive option to launch PassForge.")
 
 if __name__ == "__main__":
     main()
