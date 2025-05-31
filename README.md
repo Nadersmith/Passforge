@@ -78,12 +78,19 @@ python3 password_generator.py --interactive
 Expected Output:
 
 First name (Press Enter to skip): Peter
+
 Last name (Press Enter to skip): Smith
+
 What is your hobby? (Press Enter to skip): gaming
+
 What is your birth year? (Press Enter to skip): 2000
+
 What is your country? (Press Enter to skip): Jordan
+
 Password length? (Press Enter to skip, default is 12): 16
+
 Number of attempts? (Press Enter to skip, default is 1): 3
+
 ========================================
 Password 1: Peter@493922
 Strength: Strong
@@ -103,16 +110,3 @@ All generated passwords are saved to a file named passwords.txt in the same dire
 ⚠️ Security Notice
 
 > This tool is intended for educational use. Do not use generated passwords for sensitive or critical accounts without additional review or secure generation methods.
-
-
-
-
----
-
-✨ Future Improvements (Suggestions)
-
-Add support for enterprise password policies (Google, Microsoft, etc.).
-
-Build a GUI version.
-
-Add full CLI support (non-interactive mode with all options as flags).
